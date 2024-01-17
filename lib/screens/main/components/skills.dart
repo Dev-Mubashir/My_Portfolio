@@ -32,8 +32,8 @@ class Skills extends StatelessWidget {
             SizedBox(width: defaultPadding),
             Expanded(
               child: AnimatedCircularProgressIndicator(
-                percentage: 0.72,
-                label: "Django",
+                percentage: 0.60,
+                label: "Rest APIs",
               ),
             ),
             SizedBox(width: defaultPadding),

@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_svg/svg.dart';
@@ -7,11 +9,20 @@ import 'coding.dart';
 import 'knowledges.dart';
 import 'my_info.dart';
 import 'skills.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
     Key? key,
   }) : super(key: key);
+
+  downloadFile(url) {
+    AnchorElement anchorElement = new AnchorElement(href: url);
+    anchorElement.download = "CV-MubashirUrRehman";
+    anchorElement.click();
+  }
+
+  final int phoneNumber = 03145808279;
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +38,31 @@ class SideMenu extends StatelessWidget {
                   children: [
                     AreaInfoText(
                       title: "Residence",
-                      text: "Bangladesg",
+                      text: "Rawalpindi",
                     ),
                     AreaInfoText(
-                      title: "City",
-                      text: "Dhaka",
+                      title: "Mail",
+                      text: "mubashirehman01@gmail.com",
                     ),
                     AreaInfoText(
-                      title: "Age",
-                      text: "22",
+                      title: "Number",
+                      text: "03145808279",
+                    ),
+                    AreaInfoText(
+                      title: "Degree",
+                      text: "BSc Software Engineering",
+                    ),
+                    AreaInfoText(
+                      title: "Institution",
+                      text: "UET Taxila",
+                    ),
+                    AreaInfoText(
+                      title: "Graduation Date",
+                      text: "May 2024",
+                    ),
+                    AreaInfoText(
+                      title: "CGPA",
+                      text: "3.33",
                     ),
                     Skills(),
                     SizedBox(height: defaultPadding),
@@ -48,13 +75,17 @@ class SideMenu extends StatelessWidget {
                       child: FittedBox(
                         child: Row(
                           children: [
-                            Text(
-                              "DOWNLOAD CV",
-                              style: TextStyle(
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color,
+                            TextButton(
+                              onPressed: () =>
+                                  downloadFile("assets/Mubashir ur Rehman.pdf"),
+                              child: Text(
+                                "DOWNLOAD CV",
+                                style: TextStyle(
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color,
+                                ),
                               ),
                             ),
                             SizedBox(width: defaultPadding / 2),
@@ -64,22 +95,44 @@ class SideMenu extends StatelessWidget {
                       ),
                     ),
                     Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFF24242E),
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
                       margin: EdgeInsets.only(top: defaultPadding),
-                      color: Color(0xFF24242E),
                       child: Row(
                         children: [
                           Spacer(),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              const url =
+                                  'https://www.linkedin.com/in/app-developer-flutter/';
+                              launch(url);
+                            },
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              const url = 'https://github.com/Dev-Mubashir';
+                              launch(url);
+                            },
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/twitter.svg"),
+                            onPressed: () {
+                              String url =
+                                  'https://wa.me/$phoneNumber/?text=${Uri.parse("Hello")}';
+                              launch(url);
+                            },
+                            icon: Container(
+                                width: 20,
+                                height: 20,
+                                child:
+                                    Image.asset("assets/icons/whatsapp.png")),
                           ),
                           Spacer(),
                         ],

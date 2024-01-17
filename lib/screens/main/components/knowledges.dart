@@ -15,17 +15,17 @@ class Knowledges extends StatelessWidget {
       children: [
         Divider(),
         Padding(
-          padding: const EdgeInsets.symmetric(
-              vertical: defaultPadding),
+          padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             "Knowledges",
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
         KnowledgeText(text: "Flutter, Dart"),
-        KnowledgeText(text: "Stylus, Sass, Less"),
-        KnowledgeText(text: "Gulp, Webpack, Grunt"),
-        KnowledgeText(text: "GIT Knowledge"),
+        KnowledgeText(text: "Firebase & Rest APIs"),
+        KnowledgeText(text: "State Management using GetX"),
+        KnowledgeText(text: "MVVM Architecture"),
+        KnowledgeText(text: "Version Control using git"),
       ],
     );
   }
