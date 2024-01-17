@@ -22,37 +22,37 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighLight(
                       counter: AnimatedCounter(
-                        value: 119,
-                        text: "K+",
+                        value: 10,
+                        text: "+",
                       ),
-                      label: "Subscribers",
+                      label: "Projects",
                     ),
                     HeighLight(
                       counter: AnimatedCounter(
-                        value: 40,
+                        value: 2,
                         text: "+",
                       ),
-                      label: "Videos",
+                      label: "Years of Experience",
                     ),
                   ],
                 ),
-                const SizedBox(height: defaultPadding),
+                // const SizedBox(height: defaultPadding),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     HeighLight(
                       counter: AnimatedCounter(
-                        value: 30,
+                        value: 10,
                         text: "+",
                       ),
-                      label: "GitHub Projects",
+                      label: "Happy Clients",
                     ),
                     HeighLight(
                       counter: AnimatedCounter(
-                        value: 13,
-                        text: "K+",
+                        value: 6,
+                        text: "+",
                       ),
-                      label: "Stars",
+                      label: "Certifications",
                     ),
                   ],
                 ),
@@ -63,31 +63,31 @@ class HighLightsInfo extends StatelessWidget {
               children: [
                 HeighLight(
                   counter: AnimatedCounter(
-                    value: 119,
-                    text: "K+",
-                  ),
-                  label: "Subscribers",
-                ),
-                HeighLight(
-                  counter: AnimatedCounter(
-                    value: 40,
+                    value: 10,
                     text: "+",
                   ),
-                  label: "Videos",
+                  label: "Projects",
                 ),
                 HeighLight(
                   counter: AnimatedCounter(
-                    value: 30,
+                    value: 2,
                     text: "+",
                   ),
-                  label: "GitHub Projects",
+                  label: "Years of Experience",
                 ),
                 HeighLight(
                   counter: AnimatedCounter(
-                    value: 13,
-                    text: "K+",
+                    value: 10,
+                    text: "+",
                   ),
-                  label: "Stars",
+                  label: "Happy Clients",
+                ),
+                HeighLight(
+                  counter: AnimatedCounter(
+                    value: 6,
+                    text: "+",
+                  ),
+                  label: "Certifications",
                 ),
               ],
             ),
