@@ -36,7 +36,7 @@ class HighLightsInfo extends StatelessWidget {
                     ),
                   ],
                 ),
-                // const SizedBox(height: defaultPadding),
+                const SizedBox(height: defaultPadding),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
